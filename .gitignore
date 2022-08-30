@@ -1,0 +1,5 @@
+# Include documentation folder
+!/Documentation~/
+
+# Include meta files
+!*.meta
