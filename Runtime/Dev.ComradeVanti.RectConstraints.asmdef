@@ -1,0 +1,14 @@
+{
+    "name": "Dev.ComradeVanti.RectConstraints",
+    "rootNamespace": "Dev.ComradeVanti.RectConstraints",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
