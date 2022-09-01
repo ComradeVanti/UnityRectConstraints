@@ -1,5 +1,11 @@
 ﻿# Changelog
 
+## Upcoming
+
+### Added
+
+- Missing installation info to readme
+
 ## 1.0.2 - 01-09-2022
 
 ### Changed

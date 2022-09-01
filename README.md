@@ -15,6 +15,20 @@ using `openupm add dev.comradevanti.rect-constraints`. Or install manually
 as [git dependency](https://docs.unity3d.com/Manual/upm-ui-giturl.html)
 from `https://github.com/ComradeVanti/UnityRectConstraints.git` or download as
 zip and [import locally](https://docs.unity3d.com/Manual/upm-ui-local.html).
+If you
+decide to install manually, make sure your project includes the
+following [scoped registry](https://docs.unity3d.com/Manual/upm-scoped.html):
+
+```json
+{
+  "name": "package.openupm.com",
+  "url": "https://package.openupm.com",
+  "scopes": [
+    "com.openupm",
+    "dev.comradevanti.rect-constraints"
+  ]
+}
+```
 
 ## Roadmap
 
