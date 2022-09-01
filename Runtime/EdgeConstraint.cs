@@ -11,26 +11,26 @@ namespace Dev.ComradeVanti.RectConstraints
     {
 
         private readonly float edge;
-        private readonly float padding;
+        private readonly float offset;
 
 
-        internal EdgeConstraint(float edge, float padding = 0)
+        internal EdgeConstraint(float edge, float offset = 0)
         {
             this.edge = edge;
-            this.padding = padding;
+            this.offset = offset;
         }
 
 
-        public EdgeConstraint WithPadding(float padding) =>
-            new EdgeConstraint(edge, padding);
+        public EdgeConstraint WithOffset(float offset) =>
+            new EdgeConstraint(edge, offset);
 
         internal float GetEdge(Side side) =>
             side switch
             {
                 Side.Start =>
-                    edge + padding,
+                    edge + offset,
                 Side.End =>
-                    edge - padding,
+                    edge - offset,
                 _ => throw new ArgumentOutOfRangeException(nameof(side), side, null)
             };
 
