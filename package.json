@@ -1,6 +1,6 @@
 {
   "name": "dev.comradevanti.rect-constraints",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Improves working with Rects in UGUI code",
   "displayName": "Rect-constraints",
   "unity": "2020.3",
