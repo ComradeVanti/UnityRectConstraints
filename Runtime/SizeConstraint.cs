@@ -11,7 +11,7 @@ namespace Dev.ComradeVanti.RectConstraints
         private float Value { get; }
 
 
-        public SizeConstraint(float value) =>
+        internal SizeConstraint(float value) =>
             Value = value;
 
 

@@ -71,6 +71,14 @@ namespace Dev.ComradeVanti.RectConstraints
             return new Rect(x, y, w, h);
         }
 
+        /// <summary>
+        ///     Creates a new constraint with a specified size
+        /// </summary>
+        /// <param name="size">The size</param>
+        /// <returns>The constraint</returns>
+        public static SizeConstraint ToSizeOf(float size) =>
+            new SizeConstraint(size);
+
     }
 
 }
