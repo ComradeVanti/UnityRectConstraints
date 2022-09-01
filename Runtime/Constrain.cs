@@ -19,13 +19,13 @@ namespace Dev.ComradeVanti.RectConstraints
                 (null, null, null) =>
                     empty,
                 ({ } start, null, null) =>
-                    LineAt(start),
+                    LineAt(start, Side.Start),
                 (null, { } size, null) =>
                     BlockWith(size),
                 ({ } start, { } size, null) =>
                     Forward(start, size),
                 (null, null, { } end) =>
-                    LineAt(end),
+                    LineAt(end, Side.End),
                 ({ } start, null, { } end) =>
                     StretchBetween(start, end),
                 (null, { } size, { } end) =>

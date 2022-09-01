@@ -1,3 +1,5 @@
+using System;
+
 namespace Dev.ComradeVanti.RectConstraints
 {
 
@@ -8,15 +10,29 @@ namespace Dev.ComradeVanti.RectConstraints
     public readonly struct EdgeConstraint
     {
 
-        private float Value { get; }
+        private readonly float edge;
+        private readonly float padding;
 
 
-        public EdgeConstraint(float value) =>
-            Value = value;
+        internal EdgeConstraint(float edge, float padding = 0)
+        {
+            this.edge = edge;
+            this.padding = padding;
+        }
 
 
-        public static implicit operator float(EdgeConstraint c) =>
-            c.Value;
+        public EdgeConstraint WithPadding(float padding) =>
+            new EdgeConstraint(edge, padding);
+
+        internal float GetEdge(Side side) =>
+            side switch
+            {
+                Side.Start =>
+                    edge + padding,
+                Side.End =>
+                    edge - padding,
+                _ => throw new ArgumentOutOfRangeException(nameof(side), side, null)
+            };
 
     }
 
