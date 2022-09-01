@@ -11,10 +11,10 @@ namespace Dev.ComradeVanti.RectConstraints
     {
 
         private static (float Start, float Size) Axis(
-            EdgeConstraint? maybeStart,
-            SizeConstraint? maybeSize,
-            EdgeConstraint? maybeEnd) =>
-            (maybeStart, maybeSize, maybeEnd) switch
+            EdgeConstraint? startTo,
+            SizeConstraint? sizeIs,
+            EdgeConstraint? endTo) =>
+            (startTo, sizeIs, endTo) switch
             {
                 (null, null, null) =>
                     empty,
@@ -37,23 +37,23 @@ namespace Dev.ComradeVanti.RectConstraints
         /// <summary>
         ///     Create a constrained rectangle
         /// </summary>
-        /// <param name="top">The top constraint</param>
-        /// <param name="right">The right constraint</param>
-        /// <param name="bottom">The bottom constraint</param>
-        /// <param name="left">The left constraint</param>
-        /// <param name="width">The width constraint</param>
-        /// <param name="height">The height constraint</param>
+        /// <param name="topTo">The top constraint</param>
+        /// <param name="rightTo">The right constraint</param>
+        /// <param name="bottomTo">The bottom constraint</param>
+        /// <param name="leftTo">The left constraint</param>
+        /// <param name="widthIs">The width constraint</param>
+        /// <param name="heightIs">The height constraint</param>
         /// <returns>The constrained rectangle</returns>
         public static Rect Rect(
-            EdgeConstraint? top = null,
-            EdgeConstraint? right = null,
-            EdgeConstraint? bottom = null,
-            EdgeConstraint? left = null,
-            SizeConstraint? width = null,
-            SizeConstraint? height = null)
+            EdgeConstraint? topTo = null,
+            EdgeConstraint? rightTo = null,
+            EdgeConstraint? bottomTo = null,
+            EdgeConstraint? leftTo = null,
+            SizeConstraint? widthIs = null,
+            SizeConstraint? heightIs = null)
         {
-            var (x, w) = Constrain.Axis(left, width, right);
-            var (y, h) = Constrain.Axis(top, height, bottom);
+            var (x, w) = Constrain.Axis(leftTo, widthIs, rightTo);
+            var (y, h) = Constrain.Axis(topTo, heightIs, bottomTo);
 
             return new Rect(x, y, w, h);
         }
