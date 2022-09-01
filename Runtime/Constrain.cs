@@ -76,7 +76,7 @@ namespace Dev.ComradeVanti.RectConstraints
         /// </summary>
         /// <param name="size">The size</param>
         /// <returns>The constraint</returns>
-        public static SizeConstraint ToSizeOf(float size) =>
+        public static SizeConstraint ToSize(float size) =>
             new SizeConstraint(size);
 
     }
