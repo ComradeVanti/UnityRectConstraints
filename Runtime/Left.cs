@@ -3,25 +3,30 @@ using UnityEngine;
 namespace Dev.ComradeVanti.RectConstraints
 {
 
-    /// <summary>
-    ///     Contains methods to constrain to left edges
-    /// </summary>
-    public static class Left
+    public static partial class Constrain
     {
 
         /// <summary>
-        ///     The left edge of the current window (game-view, editor-window, ...)
+        ///     Contains methods to constrain to left edges
         /// </summary>
-        public static EdgeConstraint OfWindow =>
-            new EdgeConstraint(0);
+        public static class Left
+        {
 
-        /// <summary>
-        ///     Constrains to the left edge of the given rectangle
-        /// </summary>
-        /// <param name="rect">The rectangle</param>
-        /// <returns>The created constraint</returns>
-        public static EdgeConstraint Of(Rect rect) =>
-            new EdgeConstraint(rect.xMin);
+            /// <summary>
+            ///     The left edge of the current window (game-view, editor-window, ...)
+            /// </summary>
+            public static EdgeConstraint OfWindow =>
+                new EdgeConstraint(0);
+
+            /// <summary>
+            ///     Constrains to the left edge of the given rectangle
+            /// </summary>
+            /// <param name="rect">The rectangle</param>
+            /// <returns>The created constraint</returns>
+            public static EdgeConstraint Of(Rect rect) =>
+                new EdgeConstraint(rect.xMin);
+
+        }
 
     }
 
