@@ -21,6 +21,14 @@ namespace Dev.ComradeVanti.RectConstraints
             public static EdgeConstraint OfWindow =>
                 new EdgeConstraint(0);
 
+            /// <summary>
+            ///     Constrains to the top edge of the given rectangle
+            /// </summary>
+            /// <param name="rect">The rectangle</param>
+            /// <returns>The created constraint</returns>
+            public static EdgeConstraint Of(Rect rect) =>
+                new EdgeConstraint(rect.yMin);
+
         }
 
         /// <summary>
@@ -34,6 +42,14 @@ namespace Dev.ComradeVanti.RectConstraints
             /// </summary>
             public static EdgeConstraint OfWindow =>
                 new EdgeConstraint(Screen.width);
+
+            /// <summary>
+            ///     Constrains to the right edge of the given rectangle
+            /// </summary>
+            /// <param name="rect">The rectangle</param>
+            /// <returns>The created constraint</returns>
+            public static EdgeConstraint Of(Rect rect) =>
+                new EdgeConstraint(rect.xMax);
 
         }
 
@@ -49,6 +65,14 @@ namespace Dev.ComradeVanti.RectConstraints
             public static EdgeConstraint OfWindow =>
                 new EdgeConstraint(Screen.height);
 
+            /// <summary>
+            ///     Constrains to the bottom edge of the given rectangle
+            /// </summary>
+            /// <param name="rect">The rectangle</param>
+            /// <returns>The created constraint</returns>
+            public static EdgeConstraint Of(Rect rect) =>
+                new EdgeConstraint(rect.yMax);
+
         }
 
         /// <summary>
@@ -62,6 +86,14 @@ namespace Dev.ComradeVanti.RectConstraints
             /// </summary>
             public static EdgeConstraint OfWindow =>
                 new EdgeConstraint(0);
+
+            /// <summary>
+            ///     Constrains to the left edge of the given rectangle
+            /// </summary>
+            /// <param name="rect">The rectangle</param>
+            /// <returns>The created constraint</returns>
+            public static EdgeConstraint Of(Rect rect) =>
+                new EdgeConstraint(rect.xMin);
 
         }
 
