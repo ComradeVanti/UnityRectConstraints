@@ -5,10 +5,7 @@
 ## Installation
 
 The quickest way is to install via [OpenUPM](https://openupm.com)
-using `openupm add dev.comradevanti.rect-constraints`.
-
-Or install manually
+using `openupm add dev.comradevanti.rect-constraints`. Or install manually
 as [git dependency](https://docs.unity3d.com/Manual/upm-ui-giturl.html)
 from `https://github.com/ComradeVanti/UnityRectConstraints.git` or download as
-zip
-and [import locally](https://docs.unity3d.com/Manual/upm-ui-local.html).
+zip and [import locally](https://docs.unity3d.com/Manual/upm-ui-local.html).
