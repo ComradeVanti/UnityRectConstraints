@@ -2,6 +2,8 @@
 
 [![openupm](https://img.shields.io/npm/v/dev.comradevanti.rect-constraints?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/dev.comradevanti.rect-constraints/)
 
+For specific instructions and guides check out the [Wiki](https://github.com/ComradeVanti/UnityRectConstraints/wiki).
+
 ## Installation
 
 The quickest way is to install via [OpenUPM](https://openupm.com)
