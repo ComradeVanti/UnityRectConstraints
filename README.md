@@ -15,3 +15,11 @@ using `openupm add dev.comradevanti.rect-constraints`. Or install manually
 as [git dependency](https://docs.unity3d.com/Manual/upm-ui-giturl.html)
 from `https://github.com/ComradeVanti/UnityRectConstraints.git` or download as
 zip and [import locally](https://docs.unity3d.com/Manual/upm-ui-local.html).
+
+## Roadmap
+
+Features that could be added in the future
+
+- Percentage-based sizes
+- Min/Max sizes
+- Weights
