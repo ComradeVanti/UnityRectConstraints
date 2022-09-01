@@ -21,6 +21,11 @@ namespace Dev.ComradeVanti.RectConstraints
         }
 
 
+        /// <summary>
+        ///     Creates a new constraint with the specified offset
+        /// </summary>
+        /// <param name="offset">The offset</param>
+        /// <returns>The new constraint</returns>
         public EdgeConstraint WithOffset(float offset) =>
             new EdgeConstraint(edge, offset);
 
