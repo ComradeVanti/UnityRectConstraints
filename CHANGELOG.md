@@ -1,5 +1,11 @@
 ﻿# Changelog
 
+## Upcoming
+
+### Changed
+
+- Reworded package description
+
 ## 1.0.1 - 01-09-2022
 
 ### Added 
