@@ -5,3 +5,4 @@ includes some other useful `Rect` utilities. All is documented here. 🤓
 
 - [Constraining](./Constraining.md)
 - [Padding](./Padding.md)
+- [Dividing](./Dividing.md)
