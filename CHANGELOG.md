@@ -1,5 +1,11 @@
 ﻿# Changelog
 
+## Upcoming
+
+### Added
+
+- Documentation in package
+
 ## 1.1.0 - 10-09-2022
 
 ### Added
