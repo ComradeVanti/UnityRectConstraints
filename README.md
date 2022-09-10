@@ -37,4 +37,5 @@ Features that could be added in the future (Help wanted)
 - Percentage-based sizes
 - Min/Max sizes
 - Weights
+- Grids
 - Tests
