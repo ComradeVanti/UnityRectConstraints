@@ -2,6 +2,10 @@
 
 ## Upcoming
 
+### Changed
+
+- Reword package description
+
 ### Fixed
 
 - Outdated link to documentation in readme

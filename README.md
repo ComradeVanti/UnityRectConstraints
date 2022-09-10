@@ -3,7 +3,8 @@
 [![openupm](https://img.shields.io/npm/v/dev.comradevanti.rect-constraints?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/dev.comradevanti.rect-constraints/)
 
 This Unity package adds utility methods for layouting `Rect` objects, similarly
-to [Androids Constraint layout](https://developer.android.com/develop/ui/views/layout/constraint-layout).
+to [Androids Constraint layout](https://developer.android.com/develop/ui/views/layout/constraint-layout)
+and other useful utilities.
 This can be used in `GUI` and `EditorGUI` code.
 
 For specific instructions and guides check out the [documentation](./Documentation~/Home.md).
