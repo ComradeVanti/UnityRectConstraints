@@ -6,6 +6,10 @@
 
 - Pad existing rectangles
 
+### Changed
+
+- Deleted empty test assembly
+
 ## 1.0.3 - 01-09-2022
 
 ### Added
