@@ -7,6 +7,7 @@
 - Pad existing rectangles
 - Roadmap info to readme
 - Split rectangle into rows
+- Split rectangle into columns
 
 ### Changed
 

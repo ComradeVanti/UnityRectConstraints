@@ -36,6 +36,31 @@ namespace Dev.ComradeVanti.RectConstraints
         }
 
         /// <summary>
+        ///     Split a rectangle into multiple columns
+        /// </summary>
+        /// <remarks>
+        ///     If the columns are too large to fit in the rectangle they will "spill
+        ///     out" on the left
+        /// </remarks>
+        /// <param name="rect">This rectangle</param>
+        /// <param name="count">The number of columns to split into</param>
+        /// <param name="minWidth">The minimum-width for each column</param>
+        /// <returns>The created columns</returns>
+        public static IEnumerable<Rect> Columns(this Rect rect, int count, float minWidth = 0)
+        {
+            if (count <= 0)
+                yield break;
+
+            var width = Mathf.Max(Mathf.Max(rect.width / count, minWidth), 0);
+
+            for (var i = 0; i < count; i++)
+            {
+                var x = rect.x + width * i;
+                yield return new Rect(x, rect.y, width, rect.height);
+            }
+        }
+
+        /// <summary>
         ///     Create a rectangle inside this one with the specified padding
         /// </summary>
         /// <param name="rect">This rectangle</param>
