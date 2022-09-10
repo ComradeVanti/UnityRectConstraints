@@ -11,6 +11,31 @@ namespace Dev.ComradeVanti.RectConstraints
     {
 
         /// <summary>
+        ///     Split a rectangle into multiple rows
+        /// </summary>
+        /// <remarks>
+        ///     If the rows are too large to fit in the rectangle they will "spill
+        ///     out" the bottom
+        /// </remarks>
+        /// <param name="rect">This rectangle</param>
+        /// <param name="count">The number of rows to split into</param>
+        /// <param name="minHeight">The minimum-height for each row</param>
+        /// <returns>The created rows</returns>
+        public static IEnumerable<Rect> Rows(this Rect rect, int count, float minHeight = 0)
+        {
+            if (count <= 0)
+                yield break;
+
+            var height = Mathf.Max(Mathf.Max(rect.height / count, minHeight), 0);
+
+            for (var i = 0; i < count; i++)
+            {
+                var y = rect.y + height * i;
+                yield return new Rect(rect.x, y, rect.width, height);
+            }
+        }
+
+        /// <summary>
         ///     Create a rectangle inside this one with the specified padding
         /// </summary>
         /// <param name="rect">This rectangle</param>

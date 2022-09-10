@@ -6,6 +6,7 @@
 
 - Pad existing rectangles
 - Roadmap info to readme
+- Split rectangle into rows
 
 ### Changed
 
@@ -25,7 +26,7 @@
 
 ## 1.0.1 - 01-09-2022
 
-### Added 
+### Added
 
 - Roadmap
 
