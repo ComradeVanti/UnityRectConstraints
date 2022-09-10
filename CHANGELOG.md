@@ -1,5 +1,11 @@
 ﻿# Changelog
 
+## Upcoming
+
+### Added
+
+- Pad existing rectangles
+
 ## 1.0.3 - 01-09-2022
 
 ### Added
