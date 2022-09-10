@@ -1,6 +1,6 @@
 {
   "name": "dev.comradevanti.rect-constraints",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "This Unity package adds utility methods for layouting Rect objects, similarly to Androids Constraint layout and other useful utilities. This can be used in GUI and EditorGUI code.",
   "displayName": "Rect-constraints",
   "unity": "2020.3",
