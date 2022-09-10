@@ -5,6 +5,7 @@
 ### Added
 
 - Pad existing rectangles
+- Roadmap info to readme
 
 ### Changed
 

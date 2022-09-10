@@ -32,8 +32,9 @@ following [scoped registry](https://docs.unity3d.com/Manual/upm-scoped.html):
 
 ## Roadmap
 
-Features that could be added in the future
+Features that could be added in the future (Help wanted)
 
 - Percentage-based sizes
 - Min/Max sizes
 - Weights
+- Tests
