@@ -2,6 +2,10 @@
 
 ## Upcoming
 
+### Added
+
+- Max-width/height for rows/columns
+
 ### Changed
 
 - Reword package description

@@ -20,13 +20,16 @@ namespace Dev.ComradeVanti.RectConstraints
         /// <param name="rect">This rectangle</param>
         /// <param name="count">The number of rows to split into</param>
         /// <param name="minHeight">The minimum-height for each row</param>
+        /// <param name="maxHeight">The maximum-height for each row</param>
         /// <returns>The created rows</returns>
-        public static IEnumerable<Rect> Rows(this Rect rect, int count, float minHeight = 0)
+        public static IEnumerable<Rect> Rows(this Rect rect, int count, float minHeight = 0, float maxHeight = float.MaxValue)
         {
             if (count <= 0)
                 yield break;
 
-            var height = Mathf.Max(Mathf.Max(rect.height / count, minHeight), 0);
+            minHeight = Mathf.Max(minHeight, 0);
+            maxHeight = Mathf.Max(maxHeight, minHeight);
+            var height = Mathf.Clamp(rect.height / count, minHeight, maxHeight);
 
             for (var i = 0; i < count; i++)
             {
@@ -45,13 +48,16 @@ namespace Dev.ComradeVanti.RectConstraints
         /// <param name="rect">This rectangle</param>
         /// <param name="count">The number of columns to split into</param>
         /// <param name="minWidth">The minimum-width for each column</param>
+        /// <param name="maxWidth">The maximum-width for each column</param>
         /// <returns>The created columns</returns>
-        public static IEnumerable<Rect> Columns(this Rect rect, int count, float minWidth = 0)
+        public static IEnumerable<Rect> Columns(this Rect rect, int count, float minWidth = 0, float maxWidth = float.MaxValue)
         {
             if (count <= 0)
                 yield break;
 
-            var width = Mathf.Max(Mathf.Max(rect.width / count, minWidth), 0);
+            minWidth = Mathf.Max(minWidth, 0);
+            maxWidth = Mathf.Max(maxWidth, minWidth);
+            var width = Mathf.Clamp(rect.width / count, minWidth, maxWidth);
 
             for (var i = 0; i < count; i++)
             {
