@@ -6,7 +6,7 @@ This Unity package adds utility methods for layouting `Rect` objects, similarly
 to [Androids Constraint layout](https://developer.android.com/develop/ui/views/layout/constraint-layout).
 This can be used in `GUI` and `EditorGUI` code.
 
-For specific instructions and guides check out the [Wiki](https://github.com/ComradeVanti/UnityRectConstraints/wiki).
+For specific instructions and guides check out the [documentation](./Documentation~/Home.md).
 
 ## Installation
 
