@@ -75,19 +75,27 @@ namespace Dev.ComradeVanti.RectConstraints
         /// <param name="count">The number of rows to split into</param>
         /// <param name="minHeight">The minimum-height for each row</param>
         /// <param name="maxHeight">The maximum-height for each row</param>
+        /// <param name="spacing">Spacing between rows</param>
         /// <returns>The created rows</returns>
-        public static IEnumerable<Rect> Rows(this Rect rect, int count, float minHeight = 0, float maxHeight = float.MaxValue)
+        public static IEnumerable<Rect> Rows(this Rect rect, int count,
+                                             float minHeight = 0,
+                                             float maxHeight = float.MaxValue,
+                                             float spacing = 0)
         {
             if (count <= 0)
                 yield break;
 
             minHeight = Mathf.Max(minHeight, 0);
             maxHeight = Mathf.Max(maxHeight, minHeight);
-            var height = Mathf.Clamp(rect.height / count, minHeight, maxHeight);
+            spacing = Mathf.Max(spacing, 0);
+
+            var totalSpacing = spacing * (count - 1);
+            var availableHeight = Mathf.Max(rect.height - totalSpacing, 0);
+            var height = Mathf.Clamp(availableHeight / count, minHeight, maxHeight);
 
             for (var i = 0; i < count; i++)
             {
-                var y = rect.y + height * i;
+                var y = rect.y + (height + spacing) * i;
                 yield return new Rect(rect.x, y, rect.width, height);
             }
         }
@@ -103,19 +111,27 @@ namespace Dev.ComradeVanti.RectConstraints
         /// <param name="count">The number of columns to split into</param>
         /// <param name="minWidth">The minimum-width for each column</param>
         /// <param name="maxWidth">The maximum-width for each column</param>
+        /// <param name="spacing">Spacing between columns</param>
         /// <returns>The created columns</returns>
-        public static IEnumerable<Rect> Columns(this Rect rect, int count, float minWidth = 0, float maxWidth = float.MaxValue)
+        public static IEnumerable<Rect> Columns(this Rect rect, int count,
+                                                float minWidth = 0,
+                                                float maxWidth = float.MaxValue,
+                                                float spacing = 0)
         {
             if (count <= 0)
                 yield break;
 
             minWidth = Mathf.Max(minWidth, 0);
             maxWidth = Mathf.Max(maxWidth, minWidth);
-            var width = Mathf.Clamp(rect.width / count, minWidth, maxWidth);
+            spacing = Mathf.Max(spacing, 0);
+
+            var totalSpacing = spacing * (count - 1);
+            var availableWidth = Mathf.Max(rect.width - totalSpacing, 0);
+            var width = Mathf.Clamp(availableWidth / count, minWidth, maxWidth);
 
             for (var i = 0; i < count; i++)
             {
-                var x = rect.x + width * i;
+                var x = rect.x + (width + spacing) * i;
                 yield return new Rect(x, rect.y, width, rect.height);
             }
         }
