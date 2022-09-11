@@ -1,4 +1,6 @@
-﻿On this page you will learn how to use the package to constrain rectangles
+﻿# Constraining rectangles
+
+On this page you will learn how to use the package to constrain rectangles
 relative to each other. This guide assumes you are familiar
 with [Androids Constraint Layout](https://developer.android.com/develop/ui/views/layout/constraint-layout)
 but will hopefully also make sense intuitively.
