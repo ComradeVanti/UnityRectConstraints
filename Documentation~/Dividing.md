@@ -1,5 +1,12 @@
-﻿Sometimes you want to divide an existing into multiple smaller sections. An
-example would be rows, like in the following example.
+﻿# Dividing rectangles
+
+Sometimes you want to divide an existing into multiple smaller sections. Here
+you will find the utilities which allow you to do that.
+
+## Rows/Columns
+
+If you want to split a rectangle into rows or columns use the `Rows`
+and `Columns` methods.
 
 ```csharp
 var rect = new Rect(0, 0, 200, 200);
@@ -11,4 +18,19 @@ foreach (var row in rows) EditorGUI.DrawRect(row, Color.blue);
 
 ![image](./Images/Rows.png)
 
-Similarly there also exists a `Column` method.
+Notice, I gave the rows some bottom-padding so they don't stick to each other.
+
+## Splitting
+
+You can also split a rectangle into two parts according to some ration. Here is
+an example:
+
+```csharp
+var rect = new Rect(10, 10, 200, 100);
+var (split1, split2) = rect.Split2Horizontal(0.25f);
+
+EditorGUI.DrawRect(split1, Color.red);
+EditorGUI.DrawRect(split2, Color.blue);
+```
+
+![image](./Images/Split.png)

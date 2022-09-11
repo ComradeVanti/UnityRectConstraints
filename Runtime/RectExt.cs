@@ -11,6 +11,60 @@ namespace Dev.ComradeVanti.RectConstraints
     {
 
         /// <summary>
+        ///     Splits a rectangle into two parts horizontally, according to a ratio
+        /// </summary>
+        /// <param name="rect">The rectangle to split</param>
+        /// <param name="ratio">The ratio. Should be between 0 and 1</param>
+        /// <returns>The two rectangles</returns>
+        public static (Rect, Rect) Split2Horizontal(this Rect rect, float ratio)
+        {
+            ratio = Mathf.Clamp(ratio, 0, 1);
+
+            var width1 = rect.width * ratio;
+            var width2 = rect.width - width1;
+
+            var rect1 = Constrain.Rectangle(
+                top: Constrain.toTop.Of(rect),
+                left: Constrain.toLeft.Of(rect),
+                bottom: Constrain.toBottom.Of(rect),
+                width: Constrain.ToSize(width1));
+            var rect2 = Constrain.Rectangle(
+                top: Constrain.toTop.Of(rect),
+                right: Constrain.toRight.Of(rect),
+                bottom: Constrain.toBottom.Of(rect),
+                width: Constrain.ToSize(width2));
+
+            return (rect1, rect2);
+        }
+
+        /// <summary>
+        ///     Splits a rectangle into two parts vertically, according to a ratio
+        /// </summary>
+        /// <param name="rect">The rectangle to split</param>
+        /// <param name="ratio">The ratio. Should be between 0 and 1</param>
+        /// <returns>The two rectangles</returns>
+        public static (Rect, Rect) Split2Vertical(this Rect rect, float ratio)
+        {
+            ratio = Mathf.Clamp(ratio, 0, 1);
+
+            var height1 = rect.height * ratio;
+            var height2 = rect.height - height1;
+
+            var rect1 = Constrain.Rectangle(
+                top: Constrain.toTop.Of(rect),
+                left: Constrain.toLeft.Of(rect),
+                right: Constrain.toRight.Of(rect),
+                height: Constrain.ToSize(height1));
+            var rect2 = Constrain.Rectangle(
+                left: Constrain.toLeft.Of(rect),
+                right: Constrain.toRight.Of(rect),
+                bottom: Constrain.toBottom.Of(rect),
+                height: Constrain.ToSize(height2));
+
+            return (rect1, rect2);
+        }
+
+        /// <summary>
         ///     Split a rectangle into multiple rows
         /// </summary>
         /// <remarks>
