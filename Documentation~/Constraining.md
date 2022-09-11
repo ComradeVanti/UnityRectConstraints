@@ -19,7 +19,7 @@ private void OnGUI()
 ```
 
 The above call will create a `Rect` at (0, 0) with size (0, 0). In order to
-create usefull `Rect` objects, we will create constraints and pass them to
+create useful `Rect` objects, we will create constraints and pass them to
 the `Rectangle` method. All constraints are optional and can be mixed and
 matched as necessary. The different results will be described below.
 
