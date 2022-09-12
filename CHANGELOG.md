@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Typo in docs
 
+### Changed
+
+- Update docs to show new features
+
 ## 1.3.0 - 11-09-2022
 
 ### Added

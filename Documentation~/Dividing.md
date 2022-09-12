@@ -11,7 +11,7 @@ and `Columns` methods.
 
 ```csharp
 var rect = new Rect(0, 0, 200, 200);
-var rows = rect.Rows(10).Select(row => row.PadBottom(5));
+var rows = rect.Rows(10, spacing: 2);
 
 EditorGUI.DrawRect(rect, Color.green);
 foreach (var row in rows) EditorGUI.DrawRect(row, Color.blue);
@@ -19,7 +19,7 @@ foreach (var row in rows) EditorGUI.DrawRect(row, Color.blue);
 
 ![image](./Images/Rows.png)
 
-Notice, I gave the rows some bottom-padding so they don't stick to each other.
+Both `Rows` and `Columns` has support for min- and max-sizes as well as spacing.
 
 ## Splitting
 
