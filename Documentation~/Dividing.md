@@ -1,6 +1,7 @@
 ﻿# Dividing rectangles
 
-Sometimes you want to divide an existing into multiple smaller sections. Here
+Sometimes you want to divide an existing rect into multiple smaller sections. 
+Here
 you will find the utilities which allow you to do that.
 
 ## Rows/Columns
