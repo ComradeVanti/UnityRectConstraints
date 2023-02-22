@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Upcoming
 
+## 1.4.1 - 22-02-2023
+
 ### Fixed
 
 - Warning for empty editor assembly
