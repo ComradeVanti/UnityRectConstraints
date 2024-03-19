@@ -12,6 +12,11 @@ in `GUI` and `EditorGUI` code. Some features include:
 For specific instructions and guides check out
 the [documentation](./Documentation~/Home.md).
 
+**⚠️ Development is paused ⚠️**  
+No new features will be added or bugs fixed unless requested through an issue.  
+If you wish to fork this repository and continue the work, you are very welcome
+to do so.
+
 ## Installation
 
 The quickest way is to install via [OpenUPM](https://openupm.com)
